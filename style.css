@@ -1,0 +1,697 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    /* overflow: hidden; */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#main #header {
+    position: sticky;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    /* border: 2px solid red; */
+    padding: 0 2%;
+    /* margin: 0 3%; */
+    top: 0;
+    z-index: 1000;
+    background: #e7e7e7;
+}
+
+#main #header .logo {
+    position: relative;
+    /* border: 2px solid blueviolet; */
+    height: fit-content;
+    width: fit-content;
+}
+
+#main #header .logo img {
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+
+#main #header .nav_container {
+    /* position: relative;
+display: flex;
+justify-content: space-between; */
+    /* align-items: center; */
+    /* border: 2px solid black; */
+    width: 100%;
+}
+
+#main #header .nav_container .searchbox {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 2px solid brown; */
+    /* height: 80px; */
+}
+
+#main #header .nav_container .searchbox .search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid blue; */
+    width: 60%;
+    right: 0;
+}
+
+#main #header .nav_container .searchbox .search input {
+    padding: 10px 15px;
+    border-radius: 20px;
+    /* border: 1px solid black; */
+    outline: none;
+    text-align: center;
+    width: 55%;
+}
+
+#main #header .nav_container .searchbox .search i {
+    position: relative;
+    font-size: 20px;
+    color: #1f1c1c;
+    right: 8%;
+    cursor: pointer;
+    /* display: none; */
+}
+
+#main #header .nav_container .searchbox .icons {
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+#main #header .nav_container .searchbox .icons i {
+    position: relative;
+    margin: 5px;
+    /* border: 1px solid black; */
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#main #header .nav_container .navlinks ul {
+    /* border: 2px solid red; */
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#main #header .nav_container .navlinks ul li {
+    list-style: none;
+}
+
+#main #header .nav_container .navlinks ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #8B6476;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#main #header .nav_container .navlinks ul li a:hover {
+    color: #A53D48;
+}
+
+
+/* stylink of the reponsive design navlinks */
+
+#main #header .links {
+    display: none;
+    position: absolute;
+    /* border: 1px solid red; */
+    top: 85px;
+    right: 0;
+    /* padding: 10px 0 0 0; */
+    width: 100%;
+    transition: 0.5s;
+    overflow: hidden;
+    background: #A53D48;
+}
+
+
+/* responsive links active */
+
+.active {
+    display: block;
+}
+
+#main #header .links ul li {
+    padding: 20px;
+    list-style: none;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#main #header .links ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #daa0a8;
+}
+
+#main #header .links ul li a:hover {
+    color: #A53D48;
+}
+
+#main #header .links .cross {
+    position: absolute;
+    /* border: 1px solid blue; */
+    font-size: 2em;
+    width: fit-content;
+    right: 0;
+    padding: 0 10px 0;
+}
+
+
+/* hamburger bar */
+
+#main #header #bars {
+    display: none;
+}
+
+#main #header .links .cross #crossTimes {
+    position: relative;
+    padding: 5px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+
+/* -----------responsive design of header---------- */
+
+@media only screen and (max-width:852px) {
+    #main #header .nav_container .navlinks {
+        display: none;
+    }
+    #main #header .logo img {
+        height: 80px;
+        width: 80px;
+    }
+    #main #header #bars {
+        display: block;
+    }
+    #main #header .nav_container .searchbox .icons {
+        /* border: 1px solid red; */
+        padding: 0;
+    }
+    #main #header .nav_container .searchbox .icons i {
+        padding: 0;
+    }
+    #main #header .nav_container .searchbox .icons i#bars {
+        text-align: center;
+    }
+}
+
+
+/* end of the header's responsive design */
+
+
+/* automic and manual image slide show styling */
+
+#main .mainslide {
+    height: 200px;
+    width: 100%;
+}
+
+#main .slider {
+    width: 100%;
+    height: 500px;
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+#main .slides {
+    width: 550%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* overflow: hidden; */
+    /* border: 2px solid red; */
+}
+
+#main .slides input {
+    display: none;
+}
+
+#main .slide {
+    width: 20%;
+    transition: 2s;
+}
+
+#main .slide img {
+    width: 100%;
+    height: 200px;
+}
+
+
+/* css for manual slide navigation */
+
+#main .navigation-manual {
+    position: absolute;
+    width: 100%;
+    /* z-index: 1000; */
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* left: 6%; */
+    /* border: 2px solid red; */
+}
+
+#main .manual-btn {
+    border: 2px solid #A53D48;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#main .manual-btn:not( last-child) {
+    margin-right: 40px;
+}
+
+#main .manual-btn:hover {
+    background: #A53D48;
+}
+
+#main #radio1:checked~.first {
+    margin-left: 0;
+}
+
+#main #radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#main #radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#main #radio4:checked~.first {
+    margin-left: -60%;
+}
+
+
+/* css for automatic slide navigation */
+
+#main .mainslid .navigation-auto {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+#main .mainslid .navigation-auto div {
+    border: 2px solid #A53D48;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+#main .mainslid .navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#main .mainslid #radio1:checked~.navigation-auto .auto-btn1 {
+    background: coral;
+}
+
+#main .mainslid #radio2:checked~.navigation-auto .auto-btn1 {
+    background: coral;
+}
+
+#main .mainslid #radio3:checked~.navigation-auto .auto-btn1 {
+    background: coral;
+}
+
+#main .mainslid #radio4:checked~.navigation-auto .auto-btn1 {
+    background: coral;
+}
+
+
+/* end of slider animation */
+
+
+/* styling of my favorites */
+
+#main .favorites {
+    padding: 10px;
+}
+
+#main .favorites .favoris {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#main .favorites h1 {
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    color: #A53D48;
+}
+
+#main .favorites .favoris .favoris1 {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 15px;
+    overflow: hidden;
+}
+
+
+/* -----------price styling-------- */
+
+#main .favorites .favoris .favoris1 .brifing {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    z-index: 100;
+    color: #A53D48;
+    /* border: 1px solid #1f1c1c; */
+    font-family: sans-serif;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    /* border: 1px solid blue; */
+    /* background-color: #daa0a8; */
+    /* font-size: 2em; */
+}
+
+#main .favorites .favoris .favoris1 .brifing p {
+    padding: 6px;
+    margin: 2px;
+    /* width: 100%; */
+    /* border: 1px solid red; */
+}
+
+#main .favorites .favoris .favoris1 .brifing .prix {
+    position: relative;
+    text-decoration: line-through;
+    color: rgb(243, 176, 176);
+    width: fit-content;
+    left: 15%;
+}
+
+#main .favorites .favoris .favoris1 .brifing .discount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main .favorites .favoris .favoris1 .brifing .discount button {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+#main .favorites .favoris .favoris1 .brifing .discount button .fas {
+    font-size: 3em;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #daa0a8;
+}
+
+#main .favorites .favoris .favoris1 .brifing .discount button .fas:hover {
+    color: #A53D48;
+}
+
+#main .favorites .favoris .favoris1 .favoris1Img {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 75%;
+}
+
+#main .favorites .favoris .favoris1 .favoris1Img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+#main .favorites .favoris .favoris1 .favContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #A53D48; */
+}
+
+#main .favorites .favoris .favoris1 .favContent div {
+    padding: 10px;
+    visibility: hidden;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(50px);
+    /* border: 1px solid blue; */
+    background: rgba(90, 32, 32, 0.4);
+    box-shadow: 0 10px 35px 20px rgba(90, 32, 32, 0.4);
+    color: #e7e7e7;
+}
+
+#main .favorites .favoris .favoris1 .favContent div h2 {
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+#main .favorites .favoris .favoris1 .favContent div p {
+    line-height: 25px;
+}
+
+#main .favorites .favoris .favoris1:hover .favContent div {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50px);
+}
+
+
+/* end of the favorites styling */
+
+
+/* debut du css de la parti "FAITES VOUS PLAISIR" */
+
+#main .plaisir {
+    position: relative;
+    /* border: 10px solid red; */
+    height: fit-content;
+    background: #6D1A38;
+}
+
+#main .plaisir .head {
+    /* border: 2px solid blue; */
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+#main .plaisir .head h1 {
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+#main .plaisir .content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1em;
+    margin: 1% 3%;
+    height: fit-content;
+    /* justify-content: space-around; */
+    /* align-items: center;
+    border: 1px solid #A53D48; */
+    /* height: 30%; */
+}
+
+#main .plaisir .content .maincontent {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid #A53D48; */
+}
+
+#main .plaisir .content .maincontent img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+}
+
+#main .plaisir .content .plaisirContent {
+    position: relative;
+    grid-column: 2/4;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    /* flex-direction: column; */
+    /* height: ; */
+    /* width: fit-content; */
+    /* border: 5px solid black; */
+    padding: 0;
+    margin: 0;
+}
+
+#main .plaisir .content .plaisirContent p {
+    position: absolute;
+    /* border: 1px solid red; */
+    background: rgba(90, 32, 32, 0.6);
+    width: 100%;
+    padding: 5%;
+    /* height: 40vh; */
+    bottom: 0;
+    z-index: 100;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+#main .plaisir .content .plaisirContent .items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: 1em;
+    /* border: 6px solid red; */
+    width: fit-content;
+    height: 100%;
+    /* padding: 10px; */
+    margin: 0 auto;
+}
+
+#main .plaisir .content .plaisirContent .items-grid .grid-box {
+    position: relative;
+    /* margin: 0 auto; */
+    width: fit-content;
+    display: grid;
+    /* grid-template-columns: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid blue; */
+    /* margin: 10px auto; */
+    padding: 0 0 20px 0;
+    width: 100%;
+}
+
+#main .plaisir .content .plaisirContent .items-grid .grid-box img {
+    min-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+#main .plaisir .content .plaisirContent .items-grid img {
+    width: 80%;
+    height: 70%;
+}
+
+
+/* find du css de la partie "FAITES VOUS PLAISIR" */
+
+
+/* le css de la partir "MEILLEUR VENTS" est le meme css que la partir "FAVORITES DU MOMENT */
+
+
+/* stylin of the LIVE BLOG section */
+
+#main .blog {
+    /* border: 3px solid red; */
+}
+
+#main .blog h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px;
+    font-size: 2em;
+    color: #A53D48;
+}
+
+#main .blog a {
+    color: #daa0a8;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+#main .blog a:hover {
+    color: #A53D48;
+}
+
+#main .blog .textcontent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 4px solid lightgreen; */
+    min-height: 40vh;
+    /* border: 9px solid orange; */
+}
+
+#main .blog .section1 {
+    position: relative;
+    display: flex;
+    /* width: 50%; */
+    /* flex-wrap: wrap; */
+    /* height: 10%; */
+    /* border: 2px solid green; */
+    margin: 5px;
+}
+
+#main .blog .section1 div {
+    position: relative;
+    /* border: 2px solid blue; */
+    padding: 10px;
+    width: fit-content;
+}
+
+#main .blog .section1 .imgBx {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    /* border: 2px solid red; */
+}
+
+#main .blog .section1 .imgBx img {
+    max-height: 100%;
+    max-width: 100%;
+    width: fit-content;
+}
+
+#main .blog .content p,
+#main .blog .content h3 {
+    padding: 5px;
+}
+
+#main .blog .content p.text {
+    text-align: justify;
+    /* border: 2px solid red; */
+    height: 60%;
+}
