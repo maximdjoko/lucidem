@@ -68,7 +68,7 @@ body {
     position: relative;
     font-size: 20px;
     color: #1f1c1c;
-    right: 8%;
+    right: 5%;
     cursor: pointer;
 }
 
@@ -537,10 +537,6 @@ body {
 
 /* stylin of the LIVE BLOG section starts */
 
-#main .blog {
-    /* border: 3px solid red; */
-}
-
 #main .blog h2 {
     text-transform: uppercase;
     text-align: center;
@@ -577,7 +573,6 @@ body {
 
 #main .blog .section1 div {
     position: relative;
-    /* border: 2px solid blue; */
     padding: 10px;
     width: fit-content;
 }
@@ -586,7 +581,6 @@ body {
     position: relative;
     height: 100%;
     width: 50%;
-    /* border: 2px solid red; */
 }
 
 #main .blog .section1 .imgBx img {
@@ -604,7 +598,6 @@ body {
 
 #main .blog .content p.text {
     text-align: justify;
-    /* border: 2px solid red; */
     height: 60%;
 }
 
@@ -630,15 +623,10 @@ body {
 
 /* tyling of the "PLUS D'ARTICLE" part start */
 
-#main .articles {
-    /* border: 2px solid orange; */
-}
-
 #main .articles h1.title {
     position: relative;
     width: fit-content;
     margin: 0 auto;
-    /* border: 1px solid #6D1A38; */
     color: #A53D48;
     border-radius: 30px;
     padding: 10px;
@@ -646,7 +634,6 @@ body {
 }
 
 #main .articles .articlesContent {
-    /* border: 3px solid black; */
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -657,7 +644,6 @@ body {
 #main .articles .articlesContent .content {
     position: relative;
     width: 45%;
-    /* border: 5px solid green; */
 }
 
 #main .articles .articlesContent .one h1,
@@ -686,7 +672,6 @@ body {
 }
 
 #main .articles .articlesContent .two .secOne p {
-    /* border: 2px solid greenyellow; */
     position: relative;
     left: 10px;
     font-size: 2em;
@@ -719,7 +704,6 @@ body {
 /* debut du css de la partie" POINT DE VENTE" */
 
 #main .ptdevente {
-    border: 4px dotted red;
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -737,7 +721,6 @@ body {
 }
 
 #main .ptdevente .left {
-    /* border: 5px double orange; */
     padding: 30px 10px;
     display: flex;
     justify-content: center;
@@ -756,13 +739,10 @@ body {
 
 #main .ptdevente .left p:first-child,
 #main .ptdevente .left h2 {
-    /* font-size: 1.625em; */
     text-transform: uppercase;
-    /* border: 5px solid red; */
 }
 
 #main .ptdevente .right {
-    /* border: 2px double red; */
     position: relative;
     width: 40%;
     display: flex;
@@ -830,9 +810,11 @@ body {
     color: #ff6776f1;
     font-size: 1.3em;
     transition: .3s;
+    text-decoration: none;
 }
 
-#main footer .content .apropos ul li a:hover {
+#main footer .content .apropos ul li a:hover,
+#main footer .content .apropos ul li a:focus {
     color: #A53D48;
 }
 
@@ -861,7 +843,6 @@ body {
 
 #main footer .newsletter {
     position: relative;
-    /* border: 2px solid red; */
 }
 
 #main footer .newsletter p {
@@ -870,7 +851,6 @@ body {
 
 #main footer .newsletter input {
     position: relative;
-    /* border: none; */
     outline: none;
     padding: 8px;
     border-radius: 20px;
@@ -879,14 +859,14 @@ body {
 
 #main footer .newsletter button {
     position: absolute;
-    /* border: 2px solid red; */
     color: #e7e7e7;
     font-size: 1.1em;
     padding: 8px;
     background: #6D1A38;
     border-radius: 50%;
-    right: 30%;
+    right: 27%;
     text-transform: uppercase;
+    outline: none;
 }
 
 #main footer .newsletter button:hover {
@@ -907,7 +887,15 @@ body {
 }
 
 #main footer .newsletter ul li a {
+    transition: 0.5s;
     color: #A53D48;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#main footer .newsletter ul li a:hover {
+    color: #e7e7e7;
+    background: #A53D48;
 }
 
 @media only screen and (max-width:852px) {
