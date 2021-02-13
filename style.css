@@ -1,945 +1,1042 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Fira Sans', sans-serif;
-        }
-        
-        body {
-            overflow-x: hidden;
-        }
-        
-        #main {
-            overflow-x: hidden;
-        }
-        
-        #main {
-            margin: auto 5%;
-        }
-        
-        #main #header {
-            position: sticky;
-            display: flex;
-            justify-content: stretch;
-            align-items: center;
-            padding: 0 2%;
-            top: 0;
-            z-index: 1000;
-            background: #e7e7e7;
-        }
-        
-        #main #header .logo {
-            position: relative;
-            height: fit-content;
-            width: fit-content;
-        }
-        
-        #main #header .logo img {
-            position: relative;
-            width: 130px;
-            height: 130px;
-        }
-        
-        #main #header .nav_container {
-            width: 100%;
-        }
-        
-        #main #header .nav_container .searchbox {
-            position: relative;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-        
-        #main #header .nav_container .searchbox .search {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60%;
-            right: 0;
-        }
-        
-        #main #header .nav_container .searchbox .search input {
-            padding: 10px 15px;
-            border-radius: 20px;
-            outline: none;
-            text-align: center;
-            width: 55%;
-        }
-        
-        #main #header .nav_container .searchbox .search i {
-            position: relative;
-            font-size: 20px;
-            color: #1f1c1c;
-            right: 5%;
-            cursor: pointer;
-        }
-        
-        #main #header .nav_container .searchbox .icons {
-            padding: 10px;
-        }
-        
-        #main #header .nav_container .searchbox .icons i {
-            position: relative;
-            margin: 5px;
-            font-size: 2em;
-            padding: 10px 15px;
-            cursor: pointer;
-        }
-        
-        #main #header .nav_container .navlinks ul {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 60%;
-            margin: 0 auto;
-        }
-        
-        #main #header .nav_container .navlinks ul li {
-            list-style: none;
-        }
-        
-        #main #header .nav_container .navlinks ul li a {
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #8B6476;
-            cursor: pointer;
-            transition: 0.5s;
-        }
-        
-        #main #header .nav_container .navlinks ul li a:hover {
-            color: #A53D48;
-        }
-        /* stylink of the reponsive design navlinks */
-        
-        #main #header .links {
-            display: none;
-            position: absolute;
-            top: 85px;
-            right: 0;
-            width: 100%;
-            transition: 0.5s;
-            overflow: hidden;
-            background: #A53D48;
-        }
-        /* responsive links active */
-        
-        .active {
-            display: block;
-        }
-        
-        #main #header .links ul li {
-            padding: 20px;
-            list-style: none;
-            font-size: 1.5em;
-            text-align: center;
-        }
-        
-        #main #header .links ul li a {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #daa0a8;
-        }
-        
-        #main #header .links ul li a:hover {
-            color: #A53D48;
-        }
-        
-        #main #header .links .cross {
-            position: absolute;
-            font-size: 2em;
-            width: fit-content;
-            right: 0;
-            padding: 0 10px 0;
-        }
-        /* hamburger bar */
-        
-        #main #header #bars {
-            display: none;
-        }
-        
-        #main #header .links .cross #crossTimes {
-            position: relative;
-            padding: 5px;
-            right: 0;
-            top: 0;
-            cursor: pointer;
-        }
-        /* -----------responsive design of header---------- */
-        
-        @media only screen and (max-width:852px) {
-            #main #header .nav_container .navlinks {
-                display: none;
-            }
-            #main #header .logo img {
-                height: 80px;
-                width: 80px;
-            }
-            #main #header #bars {
-                display: block;
-            }
-            #main #header .nav_container .searchbox .icons {
-                padding: 0;
-            }
-            #main #header .nav_container .searchbox .icons i {
-                padding: 0;
-            }
-            #main #header .nav_container .searchbox .icons i#bars {
-                text-align: center;
-            }
-        }
-        /* end of the header's responsive design */
-        /* automic and manual image slide show styling */
-        
-        #main .mainslide {
-            height: 200px;
-            width: 100%;
-        }
-        
-        #main .slider {
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-        }
-        
-        #main .slides {
-            width: 550%;
-            height: 200px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        
-        #main .slides input {
-            display: none;
-        }
-        
-        #main .slide {
-            width: 20%;
-            transition: 2s;
-        }
-        
-        #main .slide img {
-            width: 100%;
-            height: 200px;
-        }
-        /* css for manual slide navigation */
-        
-        #main .navigation-manual {
-            position: relative;
-            width: 100%;
-            margin-top: -40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #main .manual-btn {
-            border: 2px solid #A53D48;
-            padding: 5px;
-            border-radius: 10px;
-            transition: 1s;
-            cursor: pointer;
-        }
-        
-        #main .manual-btn:not( last-child) {
-            margin-right: 40px;
-        }
-        
-        #main .manual-btn:hover {
-            background: #A53D48;
-        }
-        
-        #main #radio1:checked~.first {
-            margin-left: 0;
-        }
-        
-        #main #radio2:checked~.first {
-            margin-left: -20%;
-        }
-        
-        #main #radio3:checked~.first {
-            margin-left: -40%;
-        }
-        
-        #main #radio4:checked~.first {
-            margin-left: -60%;
-        }
-        /* css for automatic slide navigation */
-        /* end of slider animation */
-        /* styling of my favorites */
-        
-        #main .favorites {
-            padding: 10px;
-        }
-        
-        #main .favorites .favoris {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        #main .favorites h1 {
-            text-transform: uppercase;
-            padding: 20px;
-            text-align: center;
-            color: #A53D48;
-        }
-        
-        #main .favorites .favoris .favoris1 {
-            position: relative;
-            width: 250px;
-            height: 350px;
-            margin: 15px;
-            overflow: hidden;
-        }
-        /* -----------price styling-------- */
-        
-        #main .favorites .favoris .favoris1 .brifing {
-            position: absolute;
-            width: 100%;
-            height: 20%;
-            bottom: 0;
-            z-index: 100;
-            color: #A53D48;
-            font-family: sans-serif;
-            text-align: center;
-        }
-        
-        #main .favorites .favoris .favoris1 .brifing p {
-            padding: 6px;
-            margin: 2px;
-        }
-        
-        #main .favorites .favoris .favoris1 .brifing .prix {
-            position: relative;
-            text-decoration: line-through;
-            color: rgb(243, 176, 176);
-            width: fit-content;
-            left: 15%;
-        }
-        
-        #main .favorites .favoris .favoris1 .brifing .discount {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        
-        #main .favorites .favoris .favoris1 .brifing .discount button {
-            padding: 0;
-            margin: 0;
-        }
-        
-        #main .favorites .favoris .favoris1 .brifing .discount button .fas {
-            font-size: 3em;
-            cursor: pointer;
-            transition: 0.5s;
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            color: #daa0a8;
-        }
-        
-        #main .favorites .favoris .favoris1 .brifing .discount button .fas:hover {
-            color: #A53D48;
-        }
-        
-        #main .favorites .favoris .favoris1 .favoris1Img {
-            position: absolute;
-            width: 100%;
-            height: 75%;
-        }
-        
-        #main .favorites .favoris .favoris1 .favoris1Img img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        #main .favorites .favoris .favoris1 .favContent {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #main .favorites .favoris .favoris1 .favContent div {
-            padding: 10px;
-            visibility: hidden;
-            transition: 0.3s;
-            opacity: 0;
-            transform: translateY(50px);
-            background: rgba(90, 32, 32, 0.4);
-            box-shadow: 0 10px 35px 20px rgba(90, 32, 32, 0.4);
-            color: #e7e7e7;
-        }
-        
-        #main .favorites .favoris .favoris1 .favContent div h2 {
-            text-transform: uppercase;
-            padding: 10px;
-        }
-        
-        #main .favorites .favoris .favoris1 .favContent div p {
-            line-height: 25px;
-        }
-        
-        #main .favorites .favoris .favoris1:hover .favContent div {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(-50px);
-        }
-        
-        @media only screen and (max-with:852) {
-            #main .favorites h1 {
-                width: 100%;
-                font-size: 1em;
-            }
-        }
-        /* end of the favorites styling */
-        /* debut du css de la parti "FAITES VOUS PLAISIR" */
-        
-        #main .plaisir {
-            position: relative;
-            height: fit-content;
-            background: #6D1A38;
-        }
-        
-        #main .plaisir .head {
-            width: 50%;
-            margin: 5px auto;
-            text-align: center;
-            color: #e7e7e7;
-        }
-        
-        #main .plaisir .head h1 {
-            padding: 10px;
-            text-transform: uppercase;
-            font-family: sans-serif;
-        }
-        
-        #main .plaisir .content {
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr;
-            grid-gap: 1em;
-            margin: 1% 3%;
-            height: fit-content;
-        }
-        
-        #main .plaisir .content .maincontent {
-            position: relative;
-            grid-column: 1/2;
-            grid-row: 1/2;
-            width: 100%;
-            height: 100%;
-        }
-        
-        #main .plaisir .content .maincontent img {
-            min-width: 100%;
-            min-height: 100%;
-            object-fit: fill;
-        }
-        
-        #main .plaisir .content .plaisirContent {
-            position: relative;
-            grid-column: 2/4;
-            padding: 0;
-            margin: 0;
-        }
-        
-        #main .plaisir .content .plaisirContent p {
-            position: absolute;
-            background: rgba(90, 32, 32, 0.6);
-            width: 100%;
-            padding: 5%;
-            bottom: 0;
-            z-index: 100;
-            text-align: center;
-            color: #e7e7e7;
-        }
-        
-        #main .plaisir .content .plaisirContent .items-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            justify-content: center;
-            grid-gap: 1em;
-            width: fit-content;
-            height: 100%;
-            margin: 0 auto;
-        }
-        
-        #main .plaisir .content .plaisirContent .items-grid .grid-box {
-            position: relative;
-            width: fit-content;
-            display: grid;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 0 20px 0;
-            width: 100%;
-        }
-        
-        #main .plaisir .content .plaisirContent .items-grid .grid-box img {
-            min-height: 100%;
-            min-height: 100%;
-            object-fit: cover;
-        }
-        
-        #main .plaisir .content .plaisirContent .items-grid img {
-            width: 80%;
-            height: 70%;
-        }
-        /* mediaquery de la parti plaisir du moment  */
-        
-        @media only screen and (max-width: 852px) {
-            #main .plaisir .content .maincontent {
-                display: none;
-            }
-            #main .plaisir .content .plaisirContent {
-                grid-column: 1/4;
-            }
-            #main .plaisir .head {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-            }
-        }
-        /* find du css de la partie "FAITES VOUS PLAISIR" */
-        /* le css de la partir "MEILLEUR VENTS" est le meme css que la partir "FAVORITES DU MOMENT */
-        /* stylin of the LIVE BLOG section starts */
-        
-        #main .blog h2 {
-            text-transform: uppercase;
-            text-align: center;
-            font-weight: 700;
-            letter-spacing: 2px;
-            padding: 10px;
-            font-size: 2em;
-            color: #A53D48;
-        }
-        
-        #main .blog a {
-            color: #daa0a8;
-            text-transform: capitalize;
-            transition: 0.5s;
-        }
-        
-        #main .blog a:hover {
-            color: #A53D48;
-        }
-        
-        #main .blog .textcontent {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 40vh;
-        }
-        
-        #main .blog .section1 {
-            position: relative;
-            display: flex;
-            margin: 5px;
-        }
-        
-        #main .blog .section1 div {
-            position: relative;
-            padding: 10px;
-            width: fit-content;
-        }
-        
-        #main .blog .section1 .imgBx {
-            position: relative;
-            height: 100%;
-            width: 50%;
-        }
-        
-        #main .blog .section1 .imgBx img {
-            max-height: 100%;
-            max-width: 100%;
-            width: fit-content;
-        }
-        
-        #main .blog .content p,
-        #main .blog .content h3 {
-            padding: 5px;
-            color: #c2616b;
-            font-family: sans-serif;
-        }
-        
-        #main .blog .content p.text {
-            text-align: justify;
-            height: 60%;
-        }
-        /* media query of the live blog section */
-        
-        @media only screen and (max-width:852px) {
-            #main .blog .textcontent {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            #main .blog .textcontent .one {
-                flex-direction: row-reverse;
-            }
-        }
-        
-        @media only screen and (max-width:688px) {
-            #main .blog .textcontent .section1 {
-                display: block;
-            }
-            #main .blog .textcontent .section1 .imgBx {
-                width: 80%;
-            }
-        }
-        /* styling of the LIVE BLOG section end */
-        /* tyling of the "PLUS D'ARTICLE" part start */
-        
-        #main .articles h1.title {
-            position: relative;
-            width: fit-content;
-            margin: 0 auto;
-            color: #A53D48;
-            border-radius: 30px;
-            padding: 10px;
-            text-transform: uppercase;
-        }
-        
-        #main .articles .articlesContent {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-        }
-        
-        #main .articles .articlesContent .content {
-            position: relative;
-            width: 45%;
-        }
-        
-        #main .articles .articlesContent .one h1,
-        #main .articles .articlesContent .one h5 {
-            text-align: center;
-            color: #c2616b;
-            line-height: 25px;
-            text-transform: uppercase;
-        }
-        
-        #main .articles .articlesContent .one p {
-            padding: 10px;
-        }
-        
-        #main .articles .articlesContent .two {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        
-        #main .articles .articlesContent .two div {
-            position: relative;
-            width: fit-content;
-            border: 2px solid purple;
-        }
-        
-        #main .articles .articlesContent .two .secOne p {
-            position: relative;
-            left: 10px;
-            font-size: 2em;
-        }
-        
-        #main .articles .articlesContent .two .secOnen p.number {
-            padding: 20px;
-            font-size: 2em;
-        }
-        
-        #main .articles .articlesContent .two .secOne:last-child {
-            position: absolute;
-            font-size: 10px;
-        }
-        
-        @media only screen and (max-width:852px) {
-            #main .articles .articlesContent {
-                display: block;
-            }
-            #main .articles .articlesContent .content {
-                width: 100%;
-                padding: 20px 10px;
-            }
-        }
-        
-        @media only screen and (max-width:410px) {
-            #main .articles .articlesContent .one {
-                font-size: 0.8em;
-                margin: 0;
-                width: 100%;
-            }
-        }
-        /* fin du css de la partie "PLUS D'ARTICLES */
-        /* debut du css de la partie" POINT DE VENTE" */
-        
-        #main .ptdevente {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            color: #e7e7e7;
-            height: fit-content;
-            background: rgba(119, 46, 46);
-            font-size: 1.625em;
-        }
-        
-        #main .ptdevente img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: .2;
-        }
-        
-        #main .ptdevente .left {
-            padding: 30px 10px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            position: relative;
-            width: 60%;
-            padding: 7px;
-        }
-        
-        #main .ptdevente .left p,
-        #main .ptdevente .left h2,
-        #main .ptdevente .left i {
-            padding: 5px;
-        }
-        
-        #main .ptdevente .left p:first-child,
-        #main .ptdevente .left h2 {
-            text-transform: uppercase;
-        }
-        
-        #main .ptdevente .right {
-            position: relative;
-            width: 40%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 30px 10px;
-            font-size: 3em;
-            margin: 40px;
-        }
-        
-        #main .ptdevente .right p {
-            text-transform: capitalize;
-        }
-        /* mequery de la partie NOTRE POINT DE VENTE */
-        
-        @media only screen and (max-width:852px) {
-            #main .ptdevente {
-                flex-direction: column-reverse;
-            }
-            #main .ptdevente .left,
-            #main .ptdevente .right {
-                width: 100%;
-            }
-            #main .ptdevente .right {
-                margin: 10px;
-            }
-        }
-        
-        @media only screen and (max-width:688px) {
-            #main .ptdevente {
-                font-size: 1em;
-            }
-            #main .ptdevente .left h2 {
-                width: 100%;
-                font-size: 1em;
-            }
-        }
-        
-        @media only screen and (max-width:410px) {
-            #main .ptdevente .left h2 {
-                /* font-size: 0.8em; */
-            }
-        }
-        /* fin du css de la partie notre poin de vente */
-        /* debit du css du footer */
-        
-        #main footer .content {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 10px;
-        }
-        
-        #main footer p.copyright {
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            font-size: 1.3em;
-        }
-        
-        #main footer .content h2 {
-            color: #6D1A38;
-            text-transform: uppercase;
-            font-size: 1.625em;
-        }
-        
-        #main footer .content .apropos ul li {
-            list-style: none;
-            padding: 5px;
-        }
-        
-        #main footer .content .apropos ul li a {
-            color: #ff6776f1;
-            font-size: 1.3em;
-            transition: .3s;
-            text-decoration: none;
-        }
-        
-        #main footer .content .apropos ul li a:hover,
-        #main footer .content .apropos ul li a:focus {
-            color: #A53D48;
-        }
-        
-        #main footer .content .contacts .numbers {
-            position: relative;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        
-        #main footer .content .contacts .fa-envelope,
-        #main footer .content .contacts .numbers i {
-            color: #A53D48;
-            font-size: 2em;
-        }
-        
-        #main footer .content .contacts .numbers .phoneNumbers p {
-            padding: 5px;
-            font-size: 1.625em;
-        }
-        
-        #main footer .content .contacts span {
-            font-size: 1.2em;
-            padding: 5px;
-        }
-        
-        #main footer .newsletter {
-            position: relative;
-        }
-        
-        #main footer .newsletter p {
-            padding: 10px;
-        }
-        
-        #main footer .newsletter input {
-            position: relative;
-            outline: none;
-            padding: 8px;
-            border-radius: 20px;
-            font-size: 1.1em;
-        }
-        
-        #main footer .newsletter button {
-            position: absolute;
-            color: #e7e7e7;
-            font-size: 1.1em;
-            padding: 8px;
-            background: #6D1A38;
-            border-radius: 50%;
-            right: 27%;
-            text-transform: uppercase;
-            outline: none;
-        }
-        
-        #main footer .newsletter button:hover {
-            cursor: pointer;
-        }
-        
-        #main footer .newsletter ul {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        
-        #main footer .newsletter ul li {
-            font-size: 1.3em;
-            padding: 10px 0;
-            list-style: none;
-        }
-        
-        #main footer .newsletter ul li a {
-            transition: 0.5s;
-            color: #A53D48;
-            padding: 10px;
-            border-radius: 50%;
-        }
-        
-        #main footer .newsletter ul li a:hover {
-            color: #e7e7e7;
-            background: #A53D48;
-        }
-        
-        @media only screen and (max-width:852px) {
-            #main footer .content {
-                display: block;
-            }
-            #main footer .content div {
-                padding: 20px 10px;
-            }
-            #main footer .newsletter ul {
-                width: 60%;
-            }
-            #main footer .newsletter input {
-                width: 50%;
-            }
-            #main footer .newsletter button {
-                right: 50%;
-            }
-            #main footer p.copyright {
-                font-size: 1em;
-            }
-        }
-        
-        @media only screen and (max-width:450px) {
-            #main footer .content {
-                font-size: 1em;
-            }
-            #main footer .newsletter input {
-                width: 80%;
-            }
-            #main footer .newsletter button {
-                right: 20%;
-            }
-            #main footer .content .contacts .numbers .phoneNumbers p {
-                font-size: 0.9em;
-            }
-            #main footer .content .contacts .fa-envelope,
-            #main footer .content .contacts .numbers i {
-                font-size: 1.25em;
-            }
-            #main footer .newsletter ul {
-                width: 100%;
-            }
-            #main footer p.copyright {
-                font-size: 0.7em;
-            }
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#main {
+    overflow-x: hidden;
+}
+
+#main {
+    margin: auto 5%;
+}
+
+#main #header {
+    position: sticky;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding: 0 2%;
+    top: 0;
+    z-index: 1000;
+    background: #e7e7e7;
+}
+
+#main #header .logo {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+}
+
+#main #header .logo img {
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+
+#main #header .nav_container {
+    width: 100%;
+}
+
+#main #header .nav_container .searchbox {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#main #header .nav_container .searchbox .search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    right: 0;
+}
+
+#main #header .nav_container .searchbox .search input {
+    padding: 10px 15px;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    width: 55%;
+}
+
+#main #header .nav_container .searchbox .search i {
+    position: relative;
+    font-size: 20px;
+    color: #1f1c1c;
+    right: 5%;
+    cursor: pointer;
+}
+
+#main #header .nav_container .searchbox .icons {
+    padding: 10px;
+}
+
+#main #header .nav_container .searchbox .icons i {
+    position: relative;
+    margin: 5px;
+    font-size: 2em;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#main #header .nav_container .navlinks ul {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#main #header .nav_container .navlinks ul li {
+    list-style: none;
+}
+
+#main #header .nav_container .navlinks ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #8B6476;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#main #header .nav_container .navlinks ul li a:hover {
+    color: #A53D48;
+}
+
+
+/* stylink of the reponsive design navlinks */
+
+#main #header .links {
+    display: none;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 100%;
+    transition: 0.5s;
+    overflow: hidden;
+    background: #A53D48;
+}
+
+
+/* responsive links active */
+
+.active {
+    display: block;
+}
+
+#main #header .links ul li {
+    padding: 20px;
+    list-style: none;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#main #header .links ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #daa0a8;
+}
+
+#main #header .links ul li a:hover {
+    color: #A53D48;
+}
+
+#main #header .links .cross {
+    position: absolute;
+    font-size: 2em;
+    width: fit-content;
+    right: 0;
+    padding: 0 10px 0;
+}
+
+
+/* hamburger bar */
+
+#main #header #bars {
+    display: none;
+}
+
+#main #header .links .cross #crossTimes {
+    position: relative;
+    padding: 5px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+
+/* -----------responsive design of header---------- */
+
+@media only screen and (max-width:852px) {
+    #main #header .nav_container .navlinks {
+        display: none;
+    }
+    #main #header .logo img {
+        height: 80px;
+        width: 80px;
+    }
+    #main #header #bars {
+        display: block;
+    }
+    #main #header .nav_container .searchbox .icons {
+        padding: 0;
+    }
+    #main #header .nav_container .searchbox .icons i {
+        padding: 0;
+    }
+    #main #header .nav_container .searchbox .icons i#bars {
+        text-align: center;
+    }
+}
+
+
+/* end of the header's responsive design */
+
+
+/* automic and manual image slide show styling */
+
+#main .mainslide {
+    height: 200px;
+    width: 100%;
+}
+
+#main .slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+#main .slides {
+    width: 550%;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main .slides input {
+    display: none;
+}
+
+#main .slide {
+    width: 20%;
+    transition: 2s;
+}
+
+#main .slide img {
+    width: 100%;
+    height: 200px;
+}
+
+
+/* css for manual slide navigation */
+
+#main .navigation-manual {
+    position: relative;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main .manual-btn {
+    border: 2px solid #A53D48;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#main .manual-btn:not( last-child) {
+    margin-right: 40px;
+}
+
+#main .manual-btn:hover {
+    background: #A53D48;
+}
+
+#main #radio1:checked~.first {
+    margin-left: 0;
+}
+
+#main #radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#main #radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#main #radio4:checked~.first {
+    margin-left: -60%;
+}
+
+
+/* css for automatic slide navigation */
+
+
+/* end of slider animation */
+
+
+/* styling of my favorites */
+
+#main .favorites {
+    padding: 10px;
+}
+
+#main .favorites .favoris {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#main .favorites h1 {
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    color: #A53D48;
+}
+
+#main .favorites .favoris .favoris1 {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 15px;
+    overflow: hidden;
+}
+
+
+/* -----------price styling-------- */
+
+#main .favorites .favoris .favoris1 .brifing {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    z-index: 100;
+    color: #A53D48;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#main .favorites .favoris .favoris1 .brifing p {
+    padding: 6px;
+    margin: 2px;
+}
+
+#main .favorites .favoris .favoris1 .brifing .prix {
+    position: relative;
+    text-decoration: line-through;
+    color: rgb(243, 176, 176);
+    width: fit-content;
+    left: 15%;
+}
+
+#main .favorites .favoris .favoris1 .brifing .discount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main .favorites .favoris .favoris1 .brifing .discount button {
+    padding: 0;
+    margin: 0;
+}
+
+#main .favorites .favoris .favoris1 .brifing .discount button .fas {
+    font-size: 3em;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #daa0a8;
+}
+
+#main .favorites .favoris .favoris1 .brifing .discount button .fas:hover {
+    color: #A53D48;
+}
+
+#main .favorites .favoris .favoris1 .favoris1Img {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+}
+
+#main .favorites .favoris .favoris1 .favoris1Img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#main .favorites .favoris .favoris1 .favContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main .favorites .favoris .favoris1 .favContent div {
+    padding: 10px;
+    visibility: hidden;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(50px);
+    background: rgba(90, 32, 32, 0.4);
+    box-shadow: 0 10px 35px 20px rgba(90, 32, 32, 0.4);
+    color: #e7e7e7;
+}
+
+#main .favorites .favoris .favoris1 .favContent div h2 {
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+#main .favorites .favoris .favoris1 .favContent div p {
+    line-height: 25px;
+}
+
+#main .favorites .favoris .favoris1:hover .favContent div {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50px);
+}
+
+@media only screen and (max-with:852) {
+    #main .favorites h1 {
+        width: 100%;
+        font-size: 1em;
+    }
+}
+
+
+/* end of the favorites styling */
+
+
+/* debut du css de la parti "FAITES VOUS PLAISIR" */
+
+#main .plaisir {
+    position: relative;
+    height: fit-content;
+    background: #6D1A38;
+}
+
+#main .plaisir .head {
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+#main .plaisir .head h1 {
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+#main .plaisir .content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1em;
+    margin: 1% 3%;
+    height: fit-content;
+}
+
+#main .plaisir .content .maincontent {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+}
+
+#main .plaisir .content .maincontent img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+}
+
+#main .plaisir .content .plaisirContent {
+    position: relative;
+    grid-column: 2/4;
+    padding: 0;
+    margin: 0;
+}
+
+#main .plaisir .content .plaisirContent p {
+    position: absolute;
+    background: rgba(90, 32, 32, 0.6);
+    width: 100%;
+    padding: 5%;
+    bottom: 0;
+    z-index: 100;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+#main .plaisir .content .plaisirContent .items-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: 1em;
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#main .plaisir .content .plaisirContent .items-grid .grid-box {
+    position: relative;
+    width: fit-content;
+    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 20px 0;
+    width: 100%;
+}
+
+#main .plaisir .content .plaisirContent .items-grid .grid-box img {
+    min-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+#main .plaisir .content .plaisirContent .items-grid img {
+    width: 80%;
+    height: 70%;
+}
+
+
+/* mediaquery de la parti plaisir du moment  */
+
+@media only screen and (max-width: 852px) {
+    #main .plaisir .content .maincontent {
+        display: none;
+    }
+    #main .plaisir .content .plaisirContent {
+        grid-column: 1/4;
+    }
+    #main .plaisir .head {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+/* find du css de la partie "FAITES VOUS PLAISIR" */
+
+
+/* le css de la partir "MEILLEUR VENTS" est le meme css que la partir "FAVORITES DU MOMENT */
+
+
+/* stylin of the LIVE BLOG section starts */
+
+#main .blog h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px;
+    font-size: 2em;
+    color: #A53D48;
+}
+
+#main .blog a {
+    color: #daa0a8;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+#main .blog a:hover {
+    color: #A53D48;
+}
+
+#main .blog .textcontent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+}
+
+#main .blog .section1 {
+    position: relative;
+    display: flex;
+    margin: 5px;
+}
+
+#main .blog .section1 div {
+    position: relative;
+    padding: 10px;
+    width: fit-content;
+}
+
+#main .blog .section1 .imgBx {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+#main .blog .section1 .imgBx img {
+    max-height: 100%;
+    max-width: 100%;
+    width: fit-content;
+}
+
+#main .blog .content h3 {
+    text-transform: capitalize;
+}
+
+#main .blog .content p,
+#main .blog .content h3 {
+    padding: 5px;
+    color: #c2616b;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+
+#main .blog .content p.text {
+    text-align: justify;
+    height: 60%;
+}
+
+
+/* media query of the live blog section */
+
+@media only screen and (max-width:852px) {
+    #main .blog .textcontent {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #main .blog .textcontent .one {
+        flex-direction: row-reverse;
+    }
+}
+
+@media only screen and (max-width:688px) {
+    #main .blog .textcontent .section1 {
+        display: block;
+    }
+    #main .blog .textcontent .section1 .imgBx {
+        width: 80%;
+    }
+}
+
+
+/* styling of the LIVE BLOG section end */
+
+
+/* tyling of the "PLUS D'ARTICLE" part start */
+
+#main .articles {
+    padding: 30px 0;
+}
+
+#main .articles h1.title {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    color: #A53D48;
+    border-radius: 30px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#main .articles .articlesContent {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#main .articles .articlesContent .content {
+    position: relative;
+    width: 45%;
+}
+
+#main .articles .articlesContent .one h1,
+#main .articles .articlesContent .one h5 {
+    text-align: center;
+    color: #c2616b;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+#main .articles .articlesContent .one p {
+    padding: 10px;
+}
+
+#main .articles .articlesContent .two {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main .articles .articlesContent .two div {
+    position: relative;
+    width: fit-content;
+    border: 2px solid purple;
+}
+
+#main .articles .articlesContent .two .secOne p {
+    position: relative;
+    left: 10px;
+    font-size: 2em;
+}
+
+#main .articles .articlesContent .two .secOnen p.number {
+    padding: 20px;
+    font-size: 2em;
+}
+
+#main .articles .articlesContent .two .secOne:last-child {
+    position: absolute;
+    font-size: 10px;
+}
+
+@media only screen and (max-width:852px) {
+    #main .articles .articlesContent {
+        display: block;
+    }
+    #main .articles .articlesContent .content {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    #main .articles .articlesContent .content.one h1 {
+        font-size: 1.2em;
+        border: 2px solid red;
+    }
+}
+
+@media only screen and (max-width:410px) {
+    #main .articles .articlesContent .one {
+        font-size: 0.8em;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+
+/* fin du css de la partie "PLUS D'ARTICLES */
+
+
+/* debut du css de la partie" POINT DE VENTE" */
+
+#main .ptdevente {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    color: #e7e7e7;
+    height: fit-content;
+    background: rgba(119, 46, 46);
+    font-size: 1em;
+}
+
+#main .ptdevente img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+}
+
+#main .ptdevente .left {
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    padding: 7px;
+}
+
+#main .ptdevente .left p,
+#main .ptdevente .left h2,
+#main .ptdevente .left i {
+    padding: 5px;
+}
+
+#main .ptdevente .left p:first-child,
+#main .ptdevente .left h2 {
+    text-transform: uppercase;
+}
+
+#main .ptdevente .right {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10px;
+    font-size: 1.625em;
+    margin: 40px;
+}
+
+#main .ptdevente .right p {
+    text-transform: capitalize;
+}
+
+
+/* mequery de la partie NOTRE POINT DE VENTE */
+
+@media only screen and (max-width:852px) {
+    #main .ptdevente {
+        flex-direction: column-reverse;
+    }
+    #main .ptdevente .left,
+    #main .ptdevente .right {
+        font-size: 2em;
+        width: 100%;
+    }
+    #main .ptdevente .right {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width:688px) {
+    #main .ptdevente {
+        font-size: 1em;
+    }
+    #main .ptdevente .left h2 {
+        width: 100%;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width:410px) {
+    #main .ptdevente .left h2 {
+        /* font-size: 0.8em; */
+    }
+}
+
+
+/* fin du css de la partie notre poin de vente */
+
+
+/* debit du css du footer */
+
+#main footer {
+    padding: 30px 0;
+}
+
+#main footer .content {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#main footer p.copyright {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+#main footer .content h2 {
+    color: #6D1A38;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+#main footer .content .apropos ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+#main footer .content .apropos ul li a {
+    color: #ff6776f1;
+    font-size: 1.3em;
+    transition: .3s;
+    text-decoration: none;
+}
+
+#main footer .content .apropos ul li a:hover,
+#main footer .content .apropos ul li a:focus {
+    color: #A53D48;
+}
+
+#main footer .content .contacts {
+    border-left: 2px solid #6D1A38;
+    border-right: 2px solid #6D1A38;
+    padding: 0 10px;
+}
+
+#main footer .content .contacts .numbers {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main footer .content .contacts .fa-envelope,
+#main footer .content .contacts .numbers i {
+    color: #A53D48;
+    font-size: 1.5em;
+}
+
+#main footer .content .contacts .numbers .phoneNumbers p {
+    padding: 5px 0;
+    font-size: 1.3em;
+}
+
+#main footer .content .contacts span {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+#main footer .newsletter {
+    position: relative;
+}
+
+#main footer .newsletter p {
+    padding: 5px;
+}
+
+#main footer .newsletter input {
+    position: relative;
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 1.1em;
+}
+
+#main footer .newsletter button {
+    position: absolute;
+    color: #e7e7e7;
+    font-size: 1.1em;
+    padding: 8px;
+    background: #6D1A38;
+    border-radius: 50%;
+    right: 20%;
+    text-transform: uppercase;
+    outline: none;
+}
+
+#main footer .newsletter button:hover {
+    cursor: pointer;
+}
+
+#main footer .newsletter ul {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main footer .newsletter ul li {
+    font-size: 1.3em;
+    padding: 10px 0;
+    list-style: none;
+}
+
+#main footer .newsletter ul li a {
+    transition: 0.5s;
+    color: #A53D48;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#main footer .newsletter ul li a:hover {
+    color: #e7e7e7;
+    background: #A53D48;
+}
+
+@media only screen and (max-width:852px) {
+    #main footer .content {
+        display: block;
+    }
+    #main footer .content div {
+        padding: 20px 10px;
+    }
+    #main footer .content .apropos,
+    #main footer .content .contacts,
+    #main footer .content .newsletter {
+        border-top: 2px solid #6D1A38;
+    }
+    #main footer .newsletter ul {
+        width: 60%;
+    }
+    #main footer .newsletter input {
+        width: 50%;
+    }
+    #main footer .newsletter button {
+        right: 50%;
+    }
+    #main footer p.copyright {
+        font-size: 1em;
+    }
+    #main footer .content .contacts {
+        border-left: none;
+        border-right: none;
+    }
+    #main footer .content .contacts .numbers {
+        padding: 0;
+    }
+    #main footer .content .contacts h2 {
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    #main .ptdevente .left .p,
+    #main .ptdevente .left h2 {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    #main footer .content {
+        font-size: 1em;
+    }
+    #main footer .newsletter input {
+        width: 80%;
+    }
+    #main footer .newsletter button {
+        right: 20%;
+    }
+    #main footer .content .contacts .numbers .phoneNumbers p {
+        font-size: 0.9em;
+    }
+    #main footer .content .contacts .fa-envelope,
+    #main footer .content .contacts .numbers i {
+        font-size: 1.25em;
+    }
+    #main footer .newsletter ul {
+        width: 100%;
+    }
+    #main footer p.copyright {
+        font-size: 0.7em;
+    }
+}
