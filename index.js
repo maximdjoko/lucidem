@@ -10,7 +10,7 @@ hamburger.addEventListener("click", () => {
     rlinks.style.display = "block";
 })
 cross.addEventListener("click", () => {
-    rlinks.style.right = -100 + "%";
+    rlinks.style.right = -106 + "%";
 })
 
 

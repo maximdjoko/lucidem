@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Fira Sans', sans-serif;
-    /* overflow: hidden; */
 }
 
 body {
     overflow-x: hidden;
+}
+
+#main {
+    margin: auto 5%;
 }
 
 #main #header {
@@ -15,9 +18,7 @@ body {
     display: flex;
     justify-content: stretch;
     align-items: center;
-    /* border: 2px solid red; */
     padding: 0 2%;
-    /* margin: 0 3%; */
     top: 0;
     z-index: 1000;
     background: #e7e7e7;
@@ -25,7 +26,6 @@ body {
 
 #main #header .logo {
     position: relative;
-    /* border: 2px solid blueviolet; */
     height: fit-content;
     width: fit-content;
 }
@@ -37,11 +37,6 @@ body {
 }
 
 #main #header .nav_container {
-    /* position: relative;
-display: flex;
-justify-content: space-between; */
-    /* align-items: center; */
-    /* border: 2px solid black; */
     width: 100%;
 }
 
@@ -50,8 +45,6 @@ justify-content: space-between; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* border: 2px solid brown; */
-    /* height: 80px; */
 }
 
 #main #header .nav_container .searchbox .search {
@@ -59,7 +52,6 @@ justify-content: space-between; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid blue; */
     width: 60%;
     right: 0;
 }
@@ -67,7 +59,6 @@ justify-content: space-between; */
 #main #header .nav_container .searchbox .search input {
     padding: 10px 15px;
     border-radius: 20px;
-    /* border: 1px solid black; */
     outline: none;
     text-align: center;
     width: 55%;
@@ -79,25 +70,21 @@ justify-content: space-between; */
     color: #1f1c1c;
     right: 8%;
     cursor: pointer;
-    /* display: none; */
 }
 
 #main #header .nav_container .searchbox .icons {
-    /* border: 1px solid red; */
     padding: 10px;
 }
 
 #main #header .nav_container .searchbox .icons i {
     position: relative;
     margin: 5px;
-    /* border: 1px solid black; */
     font-size: 2em;
     padding: 10px 15px;
     cursor: pointer;
 }
 
 #main #header .nav_container .navlinks ul {
-    /* border: 2px solid red; */
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -128,10 +115,8 @@ justify-content: space-between; */
 #main #header .links {
     display: none;
     position: absolute;
-    /* border: 1px solid red; */
     top: 85px;
     right: 0;
-    /* padding: 10px 0 0 0; */
     width: 100%;
     transition: 0.5s;
     overflow: hidden;
@@ -164,7 +149,6 @@ justify-content: space-between; */
 
 #main #header .links .cross {
     position: absolute;
-    /* border: 1px solid blue; */
     font-size: 2em;
     width: fit-content;
     right: 0;
@@ -201,7 +185,6 @@ justify-content: space-between; */
         display: block;
     }
     #main #header .nav_container .searchbox .icons {
-        /* border: 1px solid red; */
         padding: 0;
     }
     #main #header .nav_container .searchbox .icons i {
@@ -226,7 +209,6 @@ justify-content: space-between; */
 #main .slider {
     width: 100%;
     height: 500px;
-    /* border-radius: 10px; */
     overflow: hidden;
 }
 
@@ -236,8 +218,6 @@ justify-content: space-between; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* overflow: hidden; */
-    /* border: 2px solid red; */
 }
 
 #main .slides input {
@@ -258,15 +238,12 @@ justify-content: space-between; */
 /* css for manual slide navigation */
 
 #main .navigation-manual {
-    position: absolute;
+    position: relative;
     width: 100%;
-    /* z-index: 1000; */
     margin-top: -40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* left: 6%; */
-    /* border: 2px solid red; */
 }
 
 #main .manual-btn {
@@ -303,41 +280,6 @@ justify-content: space-between; */
 
 
 /* css for automatic slide navigation */
-
-#main .mainslid .navigation-auto {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 460px;
-}
-
-#main .mainslid .navigation-auto div {
-    border: 2px solid #A53D48;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-}
-
-#main .mainslid .navigation-auto div:not(:last-child) {
-    margin-right: 40px;
-}
-
-#main .mainslid #radio1:checked~.navigation-auto .auto-btn1 {
-    background: coral;
-}
-
-#main .mainslid #radio2:checked~.navigation-auto .auto-btn1 {
-    background: coral;
-}
-
-#main .mainslid #radio3:checked~.navigation-auto .auto-btn1 {
-    background: coral;
-}
-
-#main .mainslid #radio4:checked~.navigation-auto .auto-btn1 {
-    background: coral;
-}
 
 
 /* end of slider animation */
@@ -382,23 +324,13 @@ justify-content: space-between; */
     bottom: 0;
     z-index: 100;
     color: #A53D48;
-    /* border: 1px solid #1f1c1c; */
     font-family: sans-serif;
     text-align: center;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-    /* border: 1px solid blue; */
-    /* background-color: #daa0a8; */
-    /* font-size: 2em; */
 }
 
 #main .favorites .favoris .favoris1 .brifing p {
     padding: 6px;
     margin: 2px;
-    /* width: 100%; */
-    /* border: 1px solid red; */
 }
 
 #main .favorites .favoris .favoris1 .brifing .prix {
@@ -418,7 +350,6 @@ justify-content: space-between; */
 #main .favorites .favoris .favoris1 .brifing .discount button {
     padding: 0;
     margin: 0;
-    /* border: 1px solid red; */
 }
 
 #main .favorites .favoris .favoris1 .brifing .discount button .fas {
@@ -437,8 +368,6 @@ justify-content: space-between; */
 
 #main .favorites .favoris .favoris1 .favoris1Img {
     position: absolute;
-    /* top: 0;
-    left: 0; */
     width: 100%;
     height: 75%;
 }
@@ -449,7 +378,6 @@ justify-content: space-between; */
     left: 0;
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
 }
 
 #main .favorites .favoris .favoris1 .favContent {
@@ -461,7 +389,6 @@ justify-content: space-between; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid #A53D48; */
 }
 
 #main .favorites .favoris .favoris1 .favContent div {
@@ -470,7 +397,6 @@ justify-content: space-between; */
     transition: 0.3s;
     opacity: 0;
     transform: translateY(50px);
-    /* border: 1px solid blue; */
     background: rgba(90, 32, 32, 0.4);
     box-shadow: 0 10px 35px 20px rgba(90, 32, 32, 0.4);
     color: #e7e7e7;
@@ -499,13 +425,11 @@ justify-content: space-between; */
 
 #main .plaisir {
     position: relative;
-    /* border: 10px solid red; */
     height: fit-content;
     background: #6D1A38;
 }
 
 #main .plaisir .head {
-    /* border: 2px solid blue; */
     width: 50%;
     margin: 5px auto;
     text-align: center;
@@ -526,10 +450,6 @@ justify-content: space-between; */
     grid-gap: 1em;
     margin: 1% 3%;
     height: fit-content;
-    /* justify-content: space-around; */
-    /* align-items: center;
-    border: 1px solid #A53D48; */
-    /* height: 30%; */
 }
 
 #main .plaisir .content .maincontent {
@@ -538,7 +458,6 @@ justify-content: space-between; */
     grid-row: 1/2;
     width: 100%;
     height: 100%;
-    /* border: 2px solid #A53D48; */
 }
 
 #main .plaisir .content .maincontent img {
@@ -550,24 +469,15 @@ justify-content: space-between; */
 #main .plaisir .content .plaisirContent {
     position: relative;
     grid-column: 2/4;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-    /* flex-direction: column; */
-    /* height: ; */
-    /* width: fit-content; */
-    /* border: 5px solid black; */
     padding: 0;
     margin: 0;
 }
 
 #main .plaisir .content .plaisirContent p {
     position: absolute;
-    /* border: 1px solid red; */
     background: rgba(90, 32, 32, 0.6);
     width: 100%;
     padding: 5%;
-    /* height: 40vh; */
     bottom: 0;
     z-index: 100;
     text-align: center;
@@ -579,24 +489,18 @@ justify-content: space-between; */
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     grid-gap: 1em;
-    /* border: 6px solid red; */
     width: fit-content;
     height: 100%;
-    /* padding: 10px; */
     margin: 0 auto;
 }
 
 #main .plaisir .content .plaisirContent .items-grid .grid-box {
     position: relative;
-    /* margin: 0 auto; */
     width: fit-content;
     display: grid;
-    /* grid-template-columns: ; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 5px solid blue; */
-    /* margin: 10px auto; */
     padding: 0 0 20px 0;
     width: 100%;
 }
@@ -613,13 +517,25 @@ justify-content: space-between; */
 }
 
 
+/* mediaquery de la parti plaisir du moment  */
+
+@media only screen and (max-width: 852px) {
+    #main .plaisir .content .maincontent {
+        display: none;
+    }
+    #main .plaisir .content .plaisirContent {
+        grid-column: 1/4;
+    }
+}
+
+
 /* find du css de la partie "FAITES VOUS PLAISIR" */
 
 
 /* le css de la partir "MEILLEUR VENTS" est le meme css que la partir "FAVORITES DU MOMENT */
 
 
-/* stylin of the LIVE BLOG section */
+/* stylin of the LIVE BLOG section starts */
 
 #main .blog {
     /* border: 3px solid red; */
@@ -650,18 +566,12 @@ justify-content: space-between; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 4px solid lightgreen; */
     min-height: 40vh;
-    /* border: 9px solid orange; */
 }
 
 #main .blog .section1 {
     position: relative;
     display: flex;
-    /* width: 50%; */
-    /* flex-wrap: wrap; */
-    /* height: 10%; */
-    /* border: 2px solid green; */
     margin: 5px;
 }
 
@@ -689,10 +599,331 @@ justify-content: space-between; */
 #main .blog .content h3 {
     padding: 5px;
     color: #c2616b;
+    font-family: sans-serif;
 }
 
 #main .blog .content p.text {
     text-align: justify;
     /* border: 2px solid red; */
     height: 60%;
+}
+
+
+/* media query of the live blog section */
+
+@media only screen and (max-width:852px) {
+    #main .blog .textcontent {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #main .blog .textcontent .one {
+        flex-direction: row-reverse;
+    }
+}
+
+
+/* styling of the LIVE BLOG section end */
+
+
+/* tyling of the "PLUS D'ARTICLE" part start */
+
+#main .articles {
+    /* border: 2px solid orange; */
+}
+
+#main .articles h1.title {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    /* border: 1px solid #6D1A38; */
+    color: #A53D48;
+    border-radius: 30px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#main .articles .articlesContent {
+    /* border: 3px solid black; */
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#main .articles .articlesContent .content {
+    position: relative;
+    width: 45%;
+    /* border: 5px solid green; */
+}
+
+#main .articles .articlesContent .one h1,
+#main .articles .articlesContent .one h5 {
+    text-align: center;
+    color: #c2616b;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+#main .articles .articlesContent .one p {
+    padding: 10px;
+}
+
+#main .articles .articlesContent .two {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main .articles .articlesContent .two div {
+    position: relative;
+    width: fit-content;
+    border: 2px solid purple;
+}
+
+#main .articles .articlesContent .two .secOne p {
+    /* border: 2px solid greenyellow; */
+    position: relative;
+    left: 10px;
+    font-size: 2em;
+}
+
+#main .articles .articlesContent .two .secOnen p.number {
+    padding: 20px;
+    font-size: 2em;
+}
+
+#main .articles .articlesContent .two .secOne:last-child {
+    position: absolute;
+    font-size: 10px;
+}
+
+@media only screen and (max-width:852px) {
+    #main .articles .articlesContent {
+        display: block;
+    }
+    #main .articles .articlesContent .content {
+        width: 100%;
+        padding: 20px 10px;
+    }
+}
+
+
+/* fin du css de la partie "PLUS D'ARTICLES */
+
+
+/* debut du css de la partie" POINT DE VENTE" */
+
+#main .ptdevente {
+    border: 4px dotted red;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    color: #e7e7e7;
+    height: fit-content;
+    background: rgba(119, 46, 46);
+    font-size: 1.625em;
+}
+
+#main .ptdevente img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+}
+
+#main .ptdevente .left {
+    /* border: 5px double orange; */
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    padding: 7px;
+}
+
+#main .ptdevente .left p,
+#main .ptdevente .left h2,
+#main .ptdevente .left i {
+    padding: 5px;
+}
+
+#main .ptdevente .left p:first-child,
+#main .ptdevente .left h2 {
+    /* font-size: 1.625em; */
+    text-transform: uppercase;
+    /* border: 5px solid red; */
+}
+
+#main .ptdevente .right {
+    /* border: 2px double red; */
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 10px;
+    font-size: 3em;
+    margin: 40px;
+}
+
+#main .ptdevente .right p {
+    text-transform: capitalize;
+}
+
+
+/* mequery de la partie NOTRE POINT DE VENTE */
+
+@media only screen and (max-width:852px) {
+    #main .ptdevente {
+        flex-direction: column-reverse;
+    }
+    #main .ptdevente .left {
+        width: 100%;
+    }
+    #main .ptdevente .right {
+        width: 100%;
+    }
+}
+
+
+/* fin du css de la partie notre poin de vente */
+
+
+/* debit du css du footer */
+
+#main footer .content {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+#main footer p.copyright {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+#main footer .content h2 {
+    color: #6D1A38;
+    text-transform: uppercase;
+    font-size: 1.625em;
+}
+
+#main footer .content .apropos ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+#main footer .content .apropos ul li a {
+    color: #ff6776f1;
+    font-size: 1.3em;
+    transition: .3s;
+}
+
+#main footer .content .apropos ul li a:hover {
+    color: #A53D48;
+}
+
+#main footer .content .contacts .numbers {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#main footer .content .contacts .fa-envelope,
+#main footer .content .contacts .numbers i {
+    color: #A53D48;
+    font-size: 2em;
+}
+
+#main footer .content .contacts .numbers .phoneNumbers p {
+    padding: 5px;
+    font-size: 1.625em;
+}
+
+#main footer .content .contacts span {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+#main footer .newsletter {
+    position: relative;
+    /* border: 2px solid red; */
+}
+
+#main footer .newsletter p {
+    padding: 10px;
+}
+
+#main footer .newsletter input {
+    position: relative;
+    /* border: none; */
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 1.1em;
+}
+
+#main footer .newsletter button {
+    position: absolute;
+    /* border: 2px solid red; */
+    color: #e7e7e7;
+    font-size: 1.1em;
+    padding: 8px;
+    background: #6D1A38;
+    border-radius: 50%;
+    right: 30%;
+    text-transform: uppercase;
+}
+
+#main footer .newsletter button:hover {
+    cursor: pointer;
+}
+
+#main footer .newsletter ul {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main footer .newsletter ul li {
+    font-size: 1.3em;
+    padding: 10px 0;
+    list-style: none;
+}
+
+#main footer .newsletter ul li a {
+    color: #A53D48;
+}
+
+@media only screen and (max-width:852px) {
+    #main footer .content {
+        display: block;
+    }
+    #main footer .content div {
+        padding: 20px 10px;
+    }
+    #main footer .newsletter ul {
+        width: 60%;
+    }
+    #main footer .newsletter input {
+        width: 50%;
+    }
+    #main footer .newsletter button {
+        right: 50%;
+    }
 }
